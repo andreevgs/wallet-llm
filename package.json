@@ -1,0 +1,24 @@
+{
+  "name": "wallet-llm",
+  "version": "1.0.0",
+  "description": "Atomic CLI financial expense parser using node-llama-cpp and Qwen 2.5 1.5B",
+  "type": "module",
+  "main": "wallet.js",
+  "bin": {
+    "wallet": "./wallet.js"
+  },
+  "scripts": {
+    "start": "node wallet.js",
+    "wallet": "node wallet.js",
+    "test": "node --test",
+    "test:unit": "node --test test/transforms.test.js",
+    "test:ru": "node --test test/ru-wallet.test.js",
+    "test:en": "node --test test/en-wallet.test.js",
+    "test:pl": "node --test test/pl-wallet.test.js",
+    "download-model": "node scripts/download-model.js",
+    "warmup-cache": "node scripts/warmup-cache.js"
+  },
+  "dependencies": {
+    "node-llama-cpp": "^3.4.0"
+  }
+}
